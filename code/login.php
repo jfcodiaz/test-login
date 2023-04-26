@@ -15,6 +15,7 @@ $error = 'loggin failed, check your email and pass';
 if(isset($dbFake[$user]) && $pass== $dbFake[$user]){
   $success = true;
   $error = '';
+  $_SESSION['user'] = $user;
 }
 
 echo json_encode([

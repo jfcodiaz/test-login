@@ -5,9 +5,10 @@
     const pass = $('#exampleInputPassword1').val()
     const url = '/?action=login'
     $.post('/?action=login', {user, pass}).done((data) => {
-      if(!data.success) {
-        $('.alert').show('slow').html(data.error);
+      if(data.success) {
+        window.open('?action=admin', '_self');
       }
+      $('.alert').show('slow').html(data.error);
     });
   });
 })(jQuery);
