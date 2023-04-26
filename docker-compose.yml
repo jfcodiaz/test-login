@@ -1,0 +1,9 @@
+version: "3.2"
+services: 
+  web:
+    image: php:8.1-apache
+    container_name: login_web
+    ports:
+      - 80:80
+    volumes:
+      - ./code:/var/www/html
